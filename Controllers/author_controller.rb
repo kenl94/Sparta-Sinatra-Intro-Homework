@@ -12,12 +12,26 @@ class AuthorController < Sinatra::Base
     "new"
   end
 
-  get '/author/:id' do
-    "SHOW #{param[:id]}"
+  post '/author' do
+    "POST"
   end
 
-  get '/author/edit' do
+  get '/author/:id' do
+    "SHOW #{params[:id]}"
+  end
+
+
+  get '/author/:id/edit' do
     "EDIT"
   end
+
+  put '/author/:id' do
+    "UPDATE"
+  end
+
+  delete '/author/:id' do
+    "DESTROY"
+  end
+
 
 end
